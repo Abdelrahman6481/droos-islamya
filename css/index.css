@@ -1,0 +1,164 @@
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-height: 90px; /* Set a default minimum height */
+    min-width: 290px; /* Set a default minimum width */
+    margin-left: -150px; /* Divide value of min-width by 2 */
+    background: url(https://i.pinimg.com/564x/33/c2/0c/33c20c7a003b975c0133b057f54c109a.jpg); /* Black background img */
+    background-repeat: round;
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 40px 0 40px 0; /* Rounded borders */
+    padding: 32px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 50%; /* 30px from the bottom */
+    font-size: 23px;
+    font-family: 'rsail';
+}
+.snack-btn{
+    direction: rtl;
+    position: fixed;
+    right: 20px;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #149225;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: .2s bottom ease-in-out;
+    bottom: 20px;
+    border: 1px #fff solid;
+}
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    transition: .5s all;
+}
+  /* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 50%; opacity: 1;}
+}
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 50%; opacity: 1;}
+}
+/* Section Card */
+.islamic-card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    direction: rtl;
+    margin-top: 7%;
+    margin-bottom: 4em;
+}
+.title{
+    text-align: right;
+    font-family:  'rabar';
+    font-weight: 600;
+}
+.cards-img{
+    width: 5em;
+}
+.btn-card:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+.btn-card{
+    width: 19em;
+    height: 12em;
+    box-shadow: 0px 3px 15px #97a8b729;
+    display: flex;
+    text-decoration: none;
+    padding: 20px;
+    color: #fff;
+    border-radius: 20px;
+    min-height: 140px;
+    min-width: 201px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    font-size: 17px;
+    margin-top: 45px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.btn-card:hover{
+    transform: scale(0.98);
+    border-radius: 20px;
+    transform: translateY(-15px);
+    transition: 1s all ease-in-out;
+    box-shadow: 0px 0px 30px 1px rgba(139, 139, 139, 0.9);
+}
+.cards.akeda > a{
+    background: linear-gradient(244deg, #74C3F5 0%, #7398F5 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.feka > a{
+    background: transparent linear-gradient(244deg, #AB74F5 0%, #737CF5 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.sera > a{
+    background: transparent linear-gradient(244deg, #F59173 0%, #EC73F5 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.tafseer > a{
+    background: transparent linear-gradient(244deg, #6f6767 0%, #4f3c05 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.hadeeth > a{
+    background: transparent linear-gradient(244deg, #F57492 0%, #73B4F5 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.adab > a{
+    background: transparent linear-gradient(244deg, #E0963F 0%, #be9292 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.akhla > a{
+    background: transparent linear-gradient(244deg, #F59173 0%, #ff9b9b 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.adeya > a{
+    background: transparent linear-gradient(90deg, #644680 0%, #425aa1 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+.cards.monaoe > a{
+    background: transparent linear-gradient(90deg, #038d51 0%, #0091a0 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+}
+
+
+
+
+@media (min-width: 576px) { 
+    .container {
+        max-width: 540px;
+    }   
+    
+}
+
+@media (min-width: 768px){ 
+.container {
+    max-width: 750px;
+    }
+    
+}
+
+@media (min-width: 1000px){ 
+    .container {
+        max-width: 1050px;
+        }
+        
+}
